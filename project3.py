@@ -7,7 +7,6 @@ def main():
     while True:
         global coffeeInventory
         global juiceInventory
-        
         try:
             if (coffeeInventory==0 and juiceInventory==0):
                 print("#"*47)
@@ -36,7 +35,6 @@ def main():
 def check(menu,inventory):
     global coffeeInventory
     global juiceInventory
-    print(inventory)
     if inventory==0:
         print("There is no " +menu+ " left.")
         return inventory
@@ -49,147 +47,12 @@ def check(menu,inventory):
                     inventory -=quantity
                     return inventory
                 else:
-                    print("There is only {} left.".format(inventory))
                     continue
             except ValueError:
                 print("You have to enter a right quantity of menu in number")
-           
-            #     if coffeeInventory==0:
-            #         print("There is no coffee left.")
-            #     else: 
-            #         while True:
-            #             try:
-
-            #                 coffeeQuantity=int(input("Please give a quantity."))
-                        
-            #                 if coffeeQuantity<=coffeeInventory:
-            #                     print("Here it is.")
-            #                     coffeeInventory -=coffeeQuantity
-            #                     break
-            #                 else:
-            #                     print("There is only {} left.".format(coffeeInventory))
-            #                     continue
-            #             except:
-            #                 print("You have to enter a right quantity of menu in number")
-                        
-                            
-
-            # elif menuSelect==2:
-            #     if juiceInventory==0:
-            #         print("There is no juice left.")
-            #     else:
-                    
-            #         while True:
-            #             try:
-            #                 juiceQuantity=int(input("Please give a quantity."))
-            #                 if juiceQuantity<=juiceInventory:
-            #                     print("Here it is.")
-            #                     juiceInventory -=juiceQuantity
-            #                     break
-            #                 else: 
-            #                     print("There is only {} left.".format(juiceInventory))
-            #                     continue
-            #             except:
-            #                 print("You have to enter a right quantity of menu in number")
-        
-                # elif menuSelect=="2":
-                #     if juiceInventory==0:
-                #         print("There is no juice left.")
-                #     else:
-                #         print("You choose juice.")
-                #         while True:
-                #             juiceQuantity=int(input("Please give a quantity."))
-                #             if juiceQuantity<=juiceInventory:
-                #                 print("Here it is.")
-                #                 juiceInventory -=juiceQuantity
-                #                 break
-                #             else: 
-                #                 print("There is only {} left.".format(juiceInventory))
-                #                 continue
-        
-            
-
-
+            finally:
+                print(str(inventory) + " "+ menu+" is(are) left.")
 main()
-
-
-
-            # if menuSelect==1:
-            #     if coffeeInventory==0:
-            #         print("There is no coffee left.")
-            #     else: 
-            #         print("You choose coffee.")
-            #         while True:
-            #             coffeeQuantity=int(input("Please give a quantity."))
-            #             if coffeeQuantity<=coffeeInventory:
-            #                 print("Here it is.")
-            #                 coffeeInventory -=coffeeQuantity
-            #                 break
-            #             else: 
-            #                 print("There is only {} left.".format(coffeeInventory))
-            #                 continue
-
-        
-        
-        
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-# coffeeInventory=3
-# juiceInventory=2
-# while True:
-#     if coffeeInventory==0 and juiceInventory==0:
-#         print("#"*47)
-#         print("All sold out. Thank you for using \"Hello Cafe\".")
-#         print("#"*47)
-#         break
-#     else:
-#         print("*"*20)
-#         print("{0:^20s}".format("Hello Cafe"))
-#         print("*"*20)
-#         print("1. Coffee")
-#         print("2. Juice \n")
-#         menuSelect=input("Please enter a menu 1 or 2:")
-        # if menuSelect=="1":
-        #     if coffeeInventory==0:
-        #         print("There is no coffee left.")
-        #     else: 
-        #         print("You choose coffee.")
-        #         while True:
-        #             coffeeQuantity=int(input("Please give a quantity."))
-        #             if coffeeQuantity<=coffeeInventory:
-        #                 print("Here it is.")
-        #                 coffeeInventory -=coffeeQuantity
-        #                 break
-        #             else: 
-        #                 print("There is only {} left.".format(coffeeInventory))
-        #                 continue
-        # elif menuSelect=="2":
-        #     if juiceInventory==0:
-        #         print("There is no juice left.")
-        #     else:
-        #         print("You choose juice.")
-        #         while True:
-        #             juiceQuantity=int(input("Please give a quantity."))
-        #             if juiceQuantity<=juiceInventory:
-        #                 print("Here it is.")
-        #                 juiceInventory -=juiceQuantity
-        #                 break
-        #             else: 
-        #                 print("There is only {} left.".format(juiceInventory))
-        #                 continue
     
         
   
